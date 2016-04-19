@@ -1,0 +1,5 @@
+name: Mediaserver
+description: |
+  Media server including Plex, Couchpotato, Deluge, Sonarr and Jackett
+version: 1.0
+category: Versioning
