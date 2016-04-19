@@ -1,3 +1,12 @@
+.catalog:
+  name: Guacamole
+  version: 1.0
+  description: |
+    Html5 remote desktop client
+  minimum_rancher_version: v1.0.1
+  maintainer: "Fredrik Löwenhamn <fredrik.lowenhamn@gmail.com>"
+  uuid: guacamole-0
+
 guacd:
   scale: 1
 guacamole:
