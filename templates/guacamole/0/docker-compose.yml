@@ -1,0 +1,51 @@
+guacd:
+  log_driver: ''
+  labels:
+    io.rancher.container.pull_image: always
+  tty: true
+  log_opt: {}
+  image: glyptodon/guacd
+  stdin_open: true
+guacamole:
+  ports:
+  - 8000:8080/tcp
+  environment:
+    MYSQL_DATABASE: guacamole_db
+    MYSQL_USER: guacamole_user
+    MYSQL_PASSWORD: guacamole_password
+    MYSQL_HOSTNAME: mysql
+    GUACD_PORT_4822_TCP_ADDR: guacd
+    GUACD_PORT_4822_TCP_PORT: '4822'
+  log_driver: ''
+  labels:
+    io.rancher.container.pull_image: always
+  tty: true
+  log_opt: {}
+  image: glyptodon/guacamole
+  links:
+  - mysql:mysql
+  - guacd:guacd
+  stdin_open: true
+guacamole-init:
+  environment:
+    PASSWORD: password
+  labels:
+    io.rancher.container.pull_image: always
+    io.rancher.container.start_once: 'true'
+  tty: true
+  image: lowet84/mysql-guacamole-init
+  links:
+  - mysql:mysql
+  volumes:
+  - /volumes/guacamole:/data
+  stdin_open: true
+mysql:
+  environment:
+    MYSQL_ROOT_PASSWORD: password
+  labels:
+    io.rancher.container.pull_image: always
+  tty: true
+  image: mysql
+  volumes:
+  - /volumes/guacamole:/var/lib/mysql
+  stdin_open: true
