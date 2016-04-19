@@ -1,0 +1,8 @@
+guacd:
+  scale: 1
+guacamole:
+  scale: 1
+guacamole-init:
+  scale: 1
+mysql:
+  scale: 1
