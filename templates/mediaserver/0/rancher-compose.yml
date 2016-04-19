@@ -1,0 +1,20 @@
+couchpotato:
+  scale: 1
+sonarr:
+  scale: 1
+plex:
+  scale: 1
+jackett:
+  scale: 1
+deluge:
+  scale: 1
+balancer:
+  scale: 1
+  health_check:
+    port: 42
+    interval: 2000
+    unhealthy_threshold: 3
+    healthy_threshold: 2
+    response_timeout: 2000
+backup:
+  scale: 1
