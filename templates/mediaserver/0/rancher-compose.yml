@@ -1,3 +1,19 @@
+.catalog:
+  name: Mediaserver
+  version: 8.5.1-0
+  description: |
+    Media server with Plex, Couchpotato, Deluge, Jackett and Sonarr
+  minimum_rancher_version: v1.01
+  maintainer: "Fredrik Löwenhamn <fredrik.lowenhamn@gmail.com>"
+  uuid: mediaserver-0
+  questions:
+    - variable: "gitlab_hostname"
+      description: "Gitlab hostname"
+      label: "Hostname:"
+      required: true
+      default: "git.example.com"
+      type: "string"
+
 couchpotato:
   scale: 1
 sonarr:
