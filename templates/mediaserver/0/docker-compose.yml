@@ -2,7 +2,7 @@ couchpotato:
   ports:
   - 5050:5050/tcp
   environment:
-    FOLDER: ${files}
+    FOLDER: ${folder}
     MOUNTPATH: ${mountpath}
     SERVER: ${server}
     SMBPASSWORD: ${password}
@@ -20,7 +20,7 @@ sonarr:
   - 8989:8989/tcp
   - 9898:9898/tcp
   environment:
-    FOLDER: ${files}
+    FOLDER: ${folder}
     MOUNTPATH: ${mountpath}
     SERVER: ${server}
     SMBPASSWORD: ${password}
@@ -37,7 +37,7 @@ plex:
   ports:
   - 32400:32400/tcp
   environment:
-    FOLDER: ${files}
+    FOLDER: ${folder}
     MOUNTPATH: ${mountpath}
     SERVER: ${server}
     SMBPASSWORD: ${password}
@@ -67,7 +67,7 @@ deluge:
   - 53211:53211/tcp
   - 8112:8112/tcp
   environment:
-    FOLDER: ${files}
+    FOLDER: ${folder}
     MOUNTPATH: ${mountpath}
     SERVER: ${server}
     SMBPASSWORD: ${password}
@@ -100,7 +100,7 @@ balancer:
   stdin_open: true
 backup:
   environment:
-    FOLDER: ${files}
+    FOLDER: ${folder}
     MOUNTPATH: ${mountpath}
     SERVER: ${server}
     SMBPASSWORD: ${password}
