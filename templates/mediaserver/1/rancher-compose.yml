@@ -43,24 +43,6 @@
       required: true
       default: "d7nc8w37y4mc9348u9q83mqv"
       type: "string"
-    - variable: "label"
-      description: "Backup label"
-      label: "Backup label:"
-      required: true
-      default: "my_backup"
-      type: "string"
-    - variable: "interval"
-      description: "Backup interval"
-      label: "Backup interval:"
-      required: true
-      default: "6h"
-      type: "string"
-    - variable: "backuplocation"
-      description: "Backup location"
-      label: "Backup location:"
-      required: true
-      default: "Backup/Mediaserver"
-      type: "string"
     - variable: "volumelocation"
       description: "Volume location"
       label: "Volume location:"
