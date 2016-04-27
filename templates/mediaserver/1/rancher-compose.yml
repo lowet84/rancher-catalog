@@ -1,6 +1,6 @@
 .catalog:
   name: Mediaserver
-  version: 1.0
+  version: 1.1
   description: |
     Media server with Plex, Couchpotato, Deluge, Jackett and Sonarr
   minimum_rancher_version: v1.0.1
