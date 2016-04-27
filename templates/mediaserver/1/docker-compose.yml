@@ -33,6 +33,7 @@ sonarr:
   privileged: true
   volumes:
   - ${volumelocation}/sonarr:/config
+  volume_driver: ${volumeplugin}
   stdin_open: true
 plex:
   ports:
