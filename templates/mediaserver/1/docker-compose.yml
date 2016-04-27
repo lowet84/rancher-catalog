@@ -50,7 +50,7 @@ plex:
   image: lowet84/plex
   privileged: true
   volumes:
-  - ${volumelocation}/plex:/root
+  - ${volumelocation}/plex:/root/Library
   volume_driver: ${volumeplugin}
   stdin_open: true
 jackett:
