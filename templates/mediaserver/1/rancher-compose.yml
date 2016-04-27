@@ -1,0 +1,84 @@
+.catalog:
+  name: Mediaserver
+  version: 1.0
+  description: |
+    Media server with Plex, Couchpotato, Deluge, Jackett and Sonarr
+  minimum_rancher_version: v1.0.1
+  maintainer: "Fredrik Löwenhamn <fredrik.lowenhamn@gmail.com>"
+  uuid: mediaserver-0
+  questions:
+    - variable: "folder"
+      description: "SMB share folder"
+      label: "SMB folder:"
+      required: true
+      default: "my_media"
+      type: "string"
+    - variable: "mountpath"
+      description: "Path to mount to, /mnt/<path>"
+      label: "Mount path:"
+      required: true
+      default: "my_share"
+      type: "string"
+    - variable: "server"
+      description: "IP/url of SMB server"
+      label: "Server IP:"
+      required: true
+      default: "127.0.0.1"
+      type: "string"
+    - variable: "user"
+      description: "SMB user"
+      label: "SMB User:"
+      required: true
+      default: "user"
+      type: "string"
+    - variable: "password"
+      description: "SMB password"
+      label: "SMB Password:"
+      required: true
+      default: "password"
+      type: "string"
+    - variable: "jackettkey"
+      description: "Jackett encryption key, can be anything"
+      label: "Jackett Key:"
+      required: true
+      default: "d7nc8w37y4mc9348u9q83mqv"
+      type: "string"
+    - variable: "label"
+      description: "Backup label"
+      label: "Backup label:"
+      required: true
+      default: "my_backup"
+      type: "string"
+    - variable: "interval"
+      description: "Backup interval"
+      label: "Backup interval:"
+      required: true
+      default: "6h"
+      type: "string"
+    - variable: "backuplocation"
+      description: "Backup location"
+      label: "Backup location:"
+      required: true
+      default: "Backup/Mediaserver"
+      type: "string"
+
+couchpotato:
+  scale: 1
+sonarr:
+  scale: 1
+plex:
+  scale: 1
+jackett:
+  scale: 1
+deluge:
+  scale: 1
+balancer:
+  scale: 1
+  health_check:
+    port: 42
+    interval: 2000
+    unhealthy_threshold: 3
+    healthy_threshold: 2
+    response_timeout: 2000
+backup:
+  scale: 1
