@@ -61,6 +61,18 @@
       required: true
       default: "Backup/Mediaserver"
       type: "string"
+    - variable: "volumelocation"
+      description: "Volume location"
+      label: "Volume location:"
+      required: true
+      default: "/volumes/mediaserver"
+      type: "string"
+    - variable: "volumeplugin"
+      description: "Volume plugin"
+      label: "Volume plugin:"
+      required: true
+      default: ""
+      type: "string"
 
 couchpotato:
   scale: 1
