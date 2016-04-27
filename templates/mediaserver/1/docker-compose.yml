@@ -13,7 +13,8 @@ couchpotato:
   image: lowet84/couchpotato
   privileged: true
   volumes:
-  - /volumes/mediaserver/couchpotato:/config
+  - ${volumelocation}/couchpotato:/config
+  volume_driver: ${volumeplugin}
   stdin_open: true
 sonarr:
   ports:
@@ -31,7 +32,7 @@ sonarr:
   image: lowet84/sonarr
   privileged: true
   volumes:
-  - /volumes/mediaserver/sonarr:/config
+  - ${volumelocation}/sonarr:/config
   stdin_open: true
 plex:
   ports:
@@ -48,7 +49,8 @@ plex:
   image: lowet84/plex
   privileged: true
   volumes:
-  - /volumes/mediaserver/plex:/root
+  - ${volumelocation}/plex:/root
+  volume_driver: ${volumeplugin}
   stdin_open: true
 jackett:
   ports:
@@ -60,7 +62,8 @@ jackett:
   tty: true
   image: lowet84/jackett
   volumes:
-  - /volumes/mediaserver/jackett:/root/.config/Jackett
+  - ${volumelocation}/jackett:/root/.config/Jackett
+  volume_driver: ${volumeplugin}
   stdin_open: true
 deluge:
   ports:
@@ -78,7 +81,8 @@ deluge:
   image: lowet84/deluge
   privileged: true
   volumes:
-  - /volumes/mediaserver/deluge:/config
+  - ${volumelocation}/deluge:/config
+  volume_driver: ${volumeplugin}
   stdin_open: true
 balancer:
   ports:
@@ -97,24 +101,4 @@ balancer:
   - sonarr:sonarr
   - jackett:jackett
   - plex:plex
-  stdin_open: true
-backup:
-  environment:
-    FOLDER: ${folder}
-    MOUNTPATH: ${mountpath}
-    SERVER: ${server}
-    SMBPASSWORD: ${password}
-    SMBUSER: ${user}
-    LABEL: ${label}
-    INTERVAL: ${interval}
-    BACKUPLOCATION: ${backuplocation}
-  log_driver: ''
-  labels:
-    io.rancher.container.pull_image: always
-  tty: true
-  log_opt: {}
-  image: lowet84/backup
-  privileged: true
-  volumes:
-  - /volumes/mediaserver:/data
   stdin_open: true
