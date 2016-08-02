@@ -1,5 +1,5 @@
-name: Mediaserver
+name: Pydio
 description: |
-  Media server including Plex, Couchpotato, Deluge, Sonarr and Jackett
+   Pydio (formerly AjaXplorer) is a mature open source software solution for file sharing and synchronization.
 version: 1.0
-category: Versioning
+category: Storage
