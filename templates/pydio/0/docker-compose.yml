@@ -15,5 +15,5 @@ pydio:
   volumes:
   - /etc/localtime:/etc/localtime:ro
   - /volumes/pydio/data:/data
-  - /volumes/pydio/config :/config
+  - /volumes/pydio/config:/config
   stdin_open: true
