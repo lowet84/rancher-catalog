@@ -1,6 +1,6 @@
 pydio:
   ports:
-  - 443:443/tcp
+  - 4040:443/tcp
   environment:
     FOLDER: ${folder}
     MOUNTPATH: ${mountpath}
