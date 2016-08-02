@@ -1,0 +1,19 @@
+pydio:
+  ports:
+  - 443:443/tcp
+  environment:
+    FOLDER: ${folder}
+    MOUNTPATH: ${mountpath}
+    SERVER: ${server}
+    SMBPASSWORD: ${password}
+    SMBUSER: ${user}
+  labels:
+    io.rancher.container.pull_image: always
+  tty: true
+  image: lowet84/pydio
+  privileged: true
+  volumes:
+  - /etc/localtime:/etc/localtime:ro
+  - /volumes/pydio/data:/data
+  - /volumes/pydio/config :/config
+  stdin_open: true
