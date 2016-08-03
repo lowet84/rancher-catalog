@@ -1,6 +1,6 @@
 pydio:
   ports:
-  - 4040:443/tcp
+    - 4040:443/tcp
   environment:
     FOLDER: ${folder}
     MOUNTPATH: ${mountpath}
@@ -13,7 +13,7 @@ pydio:
   image: lowet84/pydio
   privileged: true
   volumes:
-  - /etc/localtime:/etc/localtime:ro
-  - /volumes/pydio/data:/data
-  - /volumes/pydio/config:/config
+    - /etc/localtime:/etc/localtime:ro
+    - /volumes/pydio/data:/data
+    - /volumes/pydio/config:/config
   stdin_open: true
