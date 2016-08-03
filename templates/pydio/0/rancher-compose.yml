@@ -1,41 +1,41 @@
 .catalog:
-  name: "Pydio"
-  version: "1.0"
-  description: "Pydio is a mature open source software solution for file sharing and synchronization."
+  name: 'Pydio'
+  version: '1.0'
+  description: 'Pydio is a mature open source software solution for file sharing and synchronization.'
   minimum_rancher_version: v1.0.1
-  maintainer: "Fredrik Löwenhamn <fredrik.lowenhamn@gmail.com>"
+  maintainer: 'Fredrik Löwenhamn <fredrik.lowenhamn@gmail.com>'
   uuid: pydio-0
   questions:
-    - variable: "folder"
-      description: "SMB share folder"
-      label: "SMB folder:"
+    - variable: 'folder'
+      description: 'SMB share folder'
+      label: 'SMB folder:'
       required: true
-      default: "my_media"
-      type: "string"
-    - variable: "mountpath"
-      description: "Path to mount to, /mnt/<path>"
-      label: "Mount path:"
+      default: 'my_media'
+      type: 'string'
+    - variable: 'mountpath'
+      description: 'Path to mount to, /mnt/<path>'
+      label: 'Mount path:'
       required: true
-      default: "my_share"
-      type: "string"
-    - variable: "server"
-      description: "IP/url of SMB server"
-      label: "Server IP:"
+      default: 'my_share'
+      type: 'string'
+    - variable: 'server'
+      description: 'IP/url of SMB server'
+      label: 'Server IP:'
       required: true
-      default: "127.0.0.1"
-      type: "string"
-    - variable: "user"
-      description: "SMB user"
-      label: "SMB User:"
+      default: '127.0.0.1'
+      type: 'string'
+    - variable: 'user'
+      description: 'SMB user'
+      label: 'SMB User:'
       required: true
-      default: "user"
-      type: "string"
-    - variable: "password"
-      description: "SMB password"
-      label: "SMB Password:"
+      default: 'user'
+      type: 'string'
+    - variable: 'password'
+      description: 'SMB password'
+      label: 'SMB Password:'
       required: true
-      default: "password"
-      type: "string"
+      default: 'password'
+      type: 'string'
 
 pydio:
   scale: 1
