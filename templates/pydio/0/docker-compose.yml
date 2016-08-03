@@ -1,12 +1,12 @@
 pydio:
-  ports:
-    - 4040:443/tcp
   environment:
     FOLDER: ${folder}
     MOUNTPATH: ${mountpath}
     SERVER: ${server}
     SMBPASSWORD: ${password}
     SMBUSER: ${user}
+  ports:
+    - 4040:443/tcp
   labels:
     io.rancher.container.pull_image: always
   tty: true
