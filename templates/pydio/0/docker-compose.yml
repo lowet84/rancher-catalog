@@ -6,14 +6,10 @@ pydio:
     SMBPASSWORD: ${password}
     SMBUSER: ${user}
   ports:
-    - 4040:443/tcp
+    - 4080:80/tcp
   labels:
     io.rancher.container.pull_image: always
   tty: true
   image: lowet84/pydio
   privileged: true
-  volumes:
-    - /etc/localtime:/etc/localtime:ro
-    - /volumes/pydio/data:/data
-    - /volumes/pydio/config:/config
   stdin_open: true
