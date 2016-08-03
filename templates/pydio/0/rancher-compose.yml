@@ -1,9 +1,9 @@
 .catalog:
+  minimum_rancher_version: v1.0.1
+  maintainer: "Fredrik Löwenhamn <fredrik.lowenhamn@gmail.com>"
   name: "Pydio"
   version: "v1.0"
   description: "Pydio is a mature open source software solution for file sharing and synchronization."
-  minimum_rancher_version: v1.0.1
-  maintainer: "Fredrik Löwenhamn <fredrik.lowenhamn@gmail.com>"
   uuid: pydio-0
   questions:
     - variable: "folder"
