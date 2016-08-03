@@ -4,7 +4,7 @@
   description: |
     Media server with Plex, Couchpotato, Deluge, Jackett and Sonarr
   minimum_rancher_version: v1.0.1
-  maintainer: "Fredrik Löwenhamn <fredrik.lowenhamn@gmail.com>"
+  maintainer: "Fredrik Lowenhamn <fredrik.lowenhamn@gmail.com>"
   uuid: mediaserver-0
   questions:
     - variable: "folder"
